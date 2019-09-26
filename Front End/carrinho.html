@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Loljinha - Carrinho</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Acessar menu de usuário-->
+        <div style="text-align:right">
+            <a href="login.html"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 3.0em;"></i></a>
+        </div>
+        <br />
+        <!-- Barra de pesquisa -->
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="Digite o item que deseja buscar" aria-label="Search">
+            <div class="input-group-append">
+                <button class="btn btn-secondary" type="button" id="btnBusca">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Titulo -->
+        <div style="text-align: center">
+            <h1 class="display-3">Carrinho</h1>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Boneco</th>
+                    <th>Categoria</th>
+                    <th>Preço (IP)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Yasuo</td>
+                    <td>Carry(?)</td>
+                    <td>6300</td>
+                </tr>
+                <tr>
+                    <td>Maokai</td>
+                    <td>Tanque escravo</td>
+                    <td>4800</td>
+                </tr>
+                <tr>
+                    <td>Ezreal</td>
+                    <td>Deus do jogo</td>
+                    <td>4800</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td> <strong>Total</strong></td>
+                    <td></td>
+                    <td>15900</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="actions">
+            <button class="btn btn-success" onclick="location.href='carrinho.html'">Pagar | <i class="fa fa-money"
+                    aria-hidden="true"></i></button>
+            <button style="float: right" class="btn btn-warning" onclick="location.href='vitrine.html'">Comprar mais
+                bonecos | <i class="fa fa-search-plus"></i></button>
+        </div>
+    </div>
+</body>
+
+</html>
