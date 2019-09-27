@@ -16,8 +16,12 @@
 <body>
     <div class="container">
         <div class="container">
+            <!-- Acessar o menu principal/vitrine -->
+            <div class="float-left">
+                <a href="vitrine.html"><i class="fa fa-th-list" aria-hidden="true" style="font-size: 3.0em;"></i></a>
+            </div>
             <!-- Acessar menu de usuário-->
-            <div style="text-align:right">
+            <div class="float-right">
                 <a href="login.html"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 3.0em;"></i></a>
             </div>
             <br />
@@ -26,7 +30,7 @@
                 <input class="form-control" type="text" placeholder="Digite o item que deseja buscar"
                     aria-label="Search">
                 <div class="input-group-append">
-                    <button class="btn btn-secondary" type="button" id="btnBusca">
+                    <button class="btn btn-secondary" onclick="location.href='carrinho.html'" type="button" id="btnBusca">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>
@@ -68,7 +72,7 @@
                 </div>
                 <button class="btn btn-success" id="bt1">Concluir cadastro</button>
             </form>
-            <br/>
+            <br />
         </div>
     </div>
 </body>

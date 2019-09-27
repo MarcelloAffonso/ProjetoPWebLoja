@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Loljinha - Carrinho</title>
+    <title>Loljinha - Busca por boneco</title>
 </head>
 
 <body>
@@ -33,50 +33,41 @@
                 </button>
             </div>
         </div>
+
         <!-- Titulo -->
         <div style="text-align: center">
-            <h1 class="display-3">Carrinho</h1>
+            <h1 class="display-3">Busca</h1>
         </div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Boneco</th>
-                    <th>Categoria</th>
-                    <th>Preço (IP)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Yasuo</td>
-                    <td>Carry(?)</td>
-                    <td>6300</td>
-                </tr>
-                <tr>
-                    <td>Maokai</td>
-                    <td>Tanque escravo</td>
-                    <td>4800</td>
-                </tr>
-                <tr>
-                    <td>Ezreal</td>
-                    <td>Deus do jogo</td>
-                    <td>4800</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td> <strong>Total</strong></td>
-                    <td></td>
-                    <td>15900</td>
-                </tr>
-            </tfoot>
-        </table>
-        <div class="actions">
-            <button class="btn btn-success" onclick="location.href='carrinho.html'">Pagar | <i class="fa fa-money"
-                    aria-hidden="true"></i></button>
-            <button style="float: right" class="btn btn-warning" onclick="location.href='vitrine.html'">Comprar mais
-                bonecos | <i class="fa fa-search-plus"></i></button>
+        <!-- Menu, mostrando alguns produtos da loja -->
+        <hr /> <!-- Separador-->
+        <div>
+            <h1 class="display-4">Bonecos encontrados:</h1>
+        </div>
+
+        <!-- Itens da loja -->
+        <div class="container">
+            <div class="row">
+                <!-- Yasuo -->
+                <div class="col-sm">
+                    <div class="panel panel-default">
+                        <div class="img"><a href="produto_detalhes.html"><img alt="" width="300px" height="177px"
+                                    src="Images/products/yasuo.jpg"></a>
+                        </div>
+                        <div class="info">
+                            <a class="title" href="produto_detalhes.html">Yasuo</a>
+                            <div class="price">
+                                <span class="st">Preço:</span><strong>$4800</strong>
+                            </div>
+                            <div class="actions">
+                                <a href="produto_detalhes.html">Detalhes</a> <br />
+                                <a href="carrinho.html">Adicionar ao carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
-
 </html>
+<script type="text/javascript" src="JavaScript/validacoes.js"></script>  

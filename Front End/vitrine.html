@@ -15,16 +15,21 @@
 
 <body>
     <div class="container">
+        <!-- Acessar o menu principal/vitrine -->
+        <div class="float-left">
+            <a href="vitrine.html"><i class="fa fa-th-list" aria-hidden="true" style="font-size: 3.0em;"></i></a>
+        </div>
         <!-- Acessar menu de usuário-->
-        <div style="text-align:right">
+        <div class="float-right">
             <a href="login.html"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 3.0em;"></i></a>
         </div>
+
         <br />
         <!-- Barra de pesquisa -->
         <div class="input-group">
             <input class="form-control" type="text" placeholder="Digite o item que deseja buscar" aria-label="Search">
             <div class="input-group-append">
-                <button class="btn btn-secondary" type="button" id="btnBusca">
+                <button class="btn btn-secondary" onclick="location.href='carrinho.html'" type="button" id="btnBusca">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
@@ -115,7 +120,7 @@
                             <span class="st">Preço:</span><strong>$6300</strong>
                         </div>
                         <div class="actions">
-                            <a href="#">Detalhes</a> <br />
+                            <a href="produto_detalhes.html">Detalhes</a> <br />
                             <a href="carrinho.html">Adicionar ao carrinho</a>
                         </div>
                     </div>
@@ -134,7 +139,7 @@
                             </div>
                             <div class="actions">
                                 <a href="#">Detalhes</a> <br />
-                                <a href="carrinho">Adicionar ao carrinho</a>
+                                <a href="carrinho.html">Adicionar ao carrinho</a>
                             </div>
                         </div>
                     </div>
