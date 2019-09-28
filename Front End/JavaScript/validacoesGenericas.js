@@ -9,8 +9,8 @@ function validaNumerico(a) {
 
 // Verifica se o campo passado está vazio
 function validaCampoVazio(field) {
-    if(!field){        
+    if(field.length > 0){        
         return false;
     }
-    location.href="busca.html"
+    return true;
 }
