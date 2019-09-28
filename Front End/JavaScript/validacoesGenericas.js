@@ -12,5 +12,5 @@ function validaCampoVazio(field) {
     if(!field){        
         return false;
     }
-    return true;
+    location.href="busca.html"
 }

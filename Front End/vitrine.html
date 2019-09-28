@@ -27,9 +27,10 @@
         <br />
         <!-- Barra de pesquisa -->
         <div class="input-group">
-            <input class="form-control" type="text" placeholder="Digite o item que deseja buscar" aria-label="Search">
+            <input id="pesquisa" class="form-control" type="text" placeholder="Digite o item que deseja buscar"
+                aria-label="Search">
             <div class="input-group-append">
-                <button class="btn btn-secondary" onclick="location.href='carrinho.html'" type="button" id="btnBusca">
+                <button class="btn btn-secondary" onclick="validaCampoVazio(pesquisa.value)" type="button" id="btnBusca">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
@@ -150,3 +151,4 @@
 </body>
 
 </html>
+<script src="Javascript/validacoesGenericas.js"></script>
