@@ -14,3 +14,11 @@ function validaCampoVazio(field) {
     }
     return true;
 }
+
+
+$(document).ready(function() {
+    $(".btnCarrinho").click(function () {
+        location.href = "carrinho.html"
+    });
+});
+

@@ -21,7 +21,7 @@
     <div class="container">
         <!-- Acessar o menu principal/vitrine -->
         <div class="float-left">
-            <a href="vitrine.html"><i class="fa fa-th-list" aria-hidden="true" style="font-size: 3.0em;"></i></a>
+            <a href="vitrine.html"><i class="fa fa-home" aria-hidden="true" style="font-size: 3.0em;"></i></a>
         </div>
         <!-- Acessar menu de usuário-->
         <div class="float-right">
@@ -33,10 +33,16 @@
             <input id="pesquisa" class="form-control" type="text" placeholder="Digite o item que deseja buscar"
                 aria-label="Search">
             <div class="input-group-append">
-                <button class="btn btn-secondary" onclick="validaCampoVazio(pesquisa.value)" type="button" id="btnBusca">
+                <button class="btn btn-secondary" onclick="validaCampoVazio(pesquisa.value)" type="button"
+                    id="btnBusca">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
+        </div>
+        <br>
+        <!-- Alerta -->
+        <div id="alertaErro" class="alert alert-warning fade show" style="display: none ;">
+            <strong>Aviso!</strong> Mínimo de 3 letras para efetuar busca!
         </div>
         <!-- Titulo -->
         <div style="text-align: center">
@@ -85,3 +91,19 @@
 </body>
 
 </html>
+<script lang="javascript">
+    // Quando for clicado no botão de busca, primeiro é feita uma validação no conteúdo da barra de busca
+    $("#btnBusca").click(function () {
+        $('#alertaErro').hide();
+        var campo = $("#pesquisa").val();
+        if (validaCampoVazio(campo) == false && campo.length > 2) {
+
+            location.href = "busca.html"
+        }
+        else {
+            $('#alertaErro').show();
+            return false;
+        }
+    });
+
+</script>

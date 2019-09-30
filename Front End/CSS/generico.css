@@ -1,0 +1,14 @@
+.footerDivisor{
+    border-right: 1px double black;
+}
+.footerSeparator{
+    background-color: antiquewhite;
+}
+footer{
+    border: 3px;
+}
+@media screen and (max-width: 991px) and (min-width: 0px){
+    .footerDivisor{
+        border-right: none;
+    }
+  }

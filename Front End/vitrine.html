@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="JavaScript/validacoesGenericas.js"></script>
+    <link rel="stylesheet" href="CSS/vitrine.css">
+    <link rel="stylesheet" href="CSS/generico.css">
 
     <title>Loljinha - A melhor loja de League of Legends do mundo!!!</title>
 </head>
@@ -19,7 +21,7 @@
     <div class="container">
         <!-- Acessar o menu principal/vitrine -->
         <div class="float-left">
-            <a href="vitrine.html"><i class="fa fa-th-list" aria-hidden="true" style="font-size: 3.0em;"></i></a>
+            <a href="vitrine.html"><i class="fa fa-home" aria-hidden="true" style="font-size: 3.0em;"></i></a>
         </div>
         <!-- Acessar menu de usuário-->
         <div class="float-right">
@@ -32,15 +34,16 @@
             <input id="pesquisa" class="form-control" type="text" placeholder="Digite o item que deseja buscar"
                 aria-label="Search">
             <div class="input-group-append">
-                <button class="btn btn-secondary" onclick="validaCampoVazio(pesquisa.value)" type="button" id="btnBusca">
+                <button class="btn btn-secondary" onclick="validaCampoVazio(pesquisa.value)" type="button"
+                    id="btnBusca">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
         </div>
-
-        <!-- Titulo -->
-        <div>
-            <h1 class="display-3">Nesse site você encontra:</h1>
+        <br>
+        <!-- Alerta -->
+        <div id="alertaErro" class="alert alert-warning fade show" style="display: none ;">
+            <strong>Aviso!</strong> Mínimo de 3 letras para efetuar busca!
         </div>
         <!-- Carousel mostrando os três conteúdos principais da página-->
         <div id="carouselItens" class="carousel slide" data-ride="carousel">
@@ -85,64 +88,73 @@
         </div>
         <!-- Menu, mostrando alguns produtos da loja -->
         <hr /> <!-- Separador-->
-        <div>
-            <h1 class="display-4">Campeões à venda:</h1>
-        </div>
 
         <!-- Itens da loja -->
         <div class="container">
+            <div>
+                <h1 class="display-4">Campeões:</h1>
+            </div>
             <div class="row">
                 <!-- Maokai -->
-                <div class="col-sm">
+                <div class="col-sm ">
+                    <br>
                     <div class="panel panel-default">
                         <div class="img"><a href="#"><img alt="" width="300px" height="177px"
                                     src="Images/products/maokai.jpg"></a>
                         </div>
                         <div class="info">
                             <a class="title" href="#">Maokai</a>
-                            <p>Um campeão uqe exige muita mecânica. Realmente bem emocionante.</p>
+                            <p> <strong>Função:</strong> Tanque/Escravo do Time</p>
                             <div class="price">
                                 <span class="st">Preço:</span><strong>$4800</strong>
                             </div>
                             <div class="actions">
-                                <a href="#">Detalhes</a> <br />
-                                <a href="carrinho.html">Adicionar ao carrinho</a>
+                                <button class="btn btn-secondary btnCarrinho" type="button">
+                                    Adicionar ao carrinho
+                                    <i class="fa fa-shopping-cart"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Yasuo -->
-                <div class="col-sm">
+                <div class="col-sm ">
+                    <br>
                     <div class="img"><a href="#"><img alt="" width="300px" height="177px"
                                 src="Images/Products/yasuo.jpg"></a>
                     </div>
                     <div class="info">
                         <a class="title" href="#">Yasuo</a>
-                        <p>Esse boneco foi feito para quem ama o bronze e não deseja sair dele de forma alguma.</p>
+                        <p> <strong>Função:</strong> Lutador/Entregador de Game</p>
                         <div class="price">
                             <span class="st">Preço:</span><strong>$6300</strong>
                         </div>
                         <div class="actions">
-                            <a href="produto_detalhes.html">Detalhes</a> <br />
-                            <a href="carrinho.html">Adicionar ao carrinho</a>
+                            <button class="btn btn-secondary btnCarrinho" type="button">
+                                Adicionar ao carrinho
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
                 <!-- Ezreal -->
                 <div class="col-sm">
+                    <br>
                     <div class="panel panel-default">
                         <div class="img"><a href="#"><img alt="" width="300px" height="177px"
                                     src="Images/Products/ezreal.jpg"></a>
                         </div>
                         <div class="info">
                             <a class="title" href="#">Ezreal</a>
-                            <p>Campeão magistral, de quem sabe como joga o jogo. Boneco usado só por high elo.</p>
+                            <p> <strong>Função:</strong> Carry</p>
                             <div class="price">
                                 <span class="st">Preço:</span><strong>$4800</strong>
                             </div>
                             <div class="actions">
-                                <a href="#">Detalhes</a> <br />
-                                <a href="carrinho.html">Adicionar ao carrinho</a>
+                                <button class="btn btn-secondary btnCarrinho" type="button">
+                                    Adicionar ao carrinho
+                                    <i class="fa fa-shopping-cart"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -151,5 +163,37 @@
         </div>
     </div>
 </body>
+<footer id="footer" class="page-footer font-small">
+    <!--Footer-->
+    <div class="border footerSeparator">
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2019 TcWhite LOL Inc. All rights reserved.</p>
+                    <p class="pull-right">Designed by <span><a target="_blank"
+                                href="https://br.op.gg/summoner/userName=tcwhite">TcWhite</a></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </html>
+<script lang="javascript">
+    // Quando for clicado no botão de busca, primeiro é feita uma validação no conteúdo da barra de busca
+    $("#btnBusca").click(function () {
+        $('#alertaErro').hide();
+        var campo = $("#pesquisa").val();
+        if (validaCampoVazio(campo) == false && campo.length > 2) {
+
+            location.href = "busca.html"
+        }
+        else {
+            $('#alertaErro').show();
+            return false;
+        }
+    });
+
+
+
+</script>
