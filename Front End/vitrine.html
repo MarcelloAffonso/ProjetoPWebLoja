@@ -90,23 +90,47 @@
         <hr /> <!-- Separador-->
 
         <!-- Itens da loja -->
-        <div class="container">
-            <div>
-                <h1 class="display-4">Campeões:</h1>
-            </div>
-            <div class="row">
-                <!-- Maokai -->
-                <div class="col-sm ">
-                    <br>
-                    <div class="panel panel-default">
-                        <div class="img"><a href="#"><img alt="" width="300px" height="177px"
-                                    src="Images/products/maokai.jpg"></a>
+
+        <div class="row fixChampions">
+            <div class="border col-lg-7 col-md-6 mr-md-1">
+                <div class="titleProduct">
+                    <h1 class="display-4">Campeões:</h1>
+                </div>
+                <!--Yasuo e maokai-->
+                <div class="row">
+                    <!-- Maokai -->
+                    <div class="col-sm">
+                        <br>
+                        <div class="panel panel-default">
+                            <div class="img"><a href="produto_detalhes.html"><img alt="" width="300px" height="177px"
+                                        src="Images/products/maokai.jpg"></a>
+                            </div>
+                            <div class="info">
+                                <a class="title" href="produto_detalhes.html">Maokai</a>
+                                <p> <strong>Função:</strong> Tanque/Escravo do Time</p>
+                                <div class="price">
+                                    <span class="st">Preço:</span><strong>$4800</strong>
+                                </div>
+                                <div class="actions">
+                                    <button class="btn btn-secondary btnCarrinho" type="button">
+                                        Adicionar ao carrinho
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Yasuo -->
+                    <div class="col-sm">
+                        <br>
+                        <div class="img"><a href="produto_detalhes.html"><img alt="" width="300px" height="177px"
+                                    src="Images/Products/yasuo.jpg"></a>
                         </div>
                         <div class="info">
-                            <a class="title" href="#">Maokai</a>
-                            <p> <strong>Função:</strong> Tanque/Escravo do Time</p>
+                            <a class="title" href="produto_detalhes.html">Yasuo</a>
+                            <p> <strong>Função:</strong> Lutador/Entregador de Game</p>
                             <div class="price">
-                                <span class="st">Preço:</span><strong>$4800</strong>
+                                <span class="st">Preço:</span><strong>$6300</strong>
                             </div>
                             <div class="actions">
                                 <button class="btn btn-secondary btnCarrinho" type="button">
@@ -117,38 +141,91 @@
                         </div>
                     </div>
                 </div>
-                <!-- Yasuo -->
-                <div class="col-sm ">
-                    <br>
-                    <div class="img"><a href="#"><img alt="" width="300px" height="177px"
-                                src="Images/Products/yasuo.jpg"></a>
-                    </div>
-                    <div class="info">
-                        <a class="title" href="#">Yasuo</a>
-                        <p> <strong>Função:</strong> Lutador/Entregador de Game</p>
-                        <div class="price">
-                            <span class="st">Preço:</span><strong>$6300</strong>
+                <!--Ez e Sona-->
+                <div class="row">
+                    <!-- Ezreal -->
+                    <div class="col-sm">
+                        <br>
+                        <div class="panel panel-default">
+                            <div class="img"><a href="#"><img alt="" width="300px" height="177px"
+                                        src="Images/Products/ezreal.jpg"></a>
+                            </div>
+                            <div class="info">
+                                <a class="title" href="#">Ezreal</a>
+                                <p> <strong>Função:</strong> Carry</p>
+                                <div class="price">
+                                    <span class="st">Preço:</span><strong>$4800</strong>
+                                </div>
+                                <div class="actions">
+                                    <button class="btn btn-secondary btnCarrinho" type="button">
+                                        Adicionar ao carrinho
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="actions">
-                            <button class="btn btn-secondary btnCarrinho" type="button">
-                                Adicionar ao carrinho
-                                <i class="fa fa-shopping-cart"></i>
-                            </button>
+                    </div>
+                    <!-- Sona -->
+                    <div class="col-sm ">
+                        <br>
+                        <div class="panel panel-default">
+                            <div class="img"><a href="produto_detalhes.html"><img alt="" width="300px" height="177px"
+                                        src="Images/products/Sona.jpg"></a>
+                            </div>
+                            <div class="info">
+                                <a class="title" href="produto_detalhes.html">Sona</a>
+                                <p> <strong>Função:</strong> Quase minion</p>
+                                <div class="price">
+                                    <span class="st">Preço:</span><strong>$3150</strong>
+                                </div>
+                                <div class="actions">
+                                    <button class="btn btn-secondary btnCarrinho" type="button">
+                                        Adicionar ao carrinho
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Ezreal -->
-                <div class="col-sm">
-                    <br>
+                <br>
+            </div>
+            <div class="border col-lg-4 col-md-5">
+                <div class="titleProduct">
+                    <h1 class="display-4">Misc</h1>
+                </div>
+                <!-- Emote Teemo-->
+                <div class="col-sm fixEmote">
                     <div class="panel panel-default">
-                        <div class="img"><a href="#"><img alt="" width="300px" height="177px"
-                                    src="Images/Products/ezreal.jpg"></a>
+                        <div class="img"><a href="produto_detalhes.html"><img width="177px" height="177px" alt=""
+                                    src="Images/products/teemo_emote.png"></a>
                         </div>
                         <div class="info">
-                            <a class="title" href="#">Ezreal</a>
-                            <p> <strong>Função:</strong> Carry</p>
+                            <a class="title" href="produto_detalhes.html">Emote Teemo</a>
+                            <p> <strong>Função:</strong> Mandar um joinha pro inimigo</p>
                             <div class="price">
-                                <span class="st">Preço:</span><strong>$4800</strong>
+                                <span class="st">Preço:</span><strong>$150</strong>
+                            </div>
+                            <div class="actions">
+                                <button class="btn btn-secondary btnCarrinho" type="button">
+                                    Adicionar ao carrinho
+                                    <i class="fa fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Emote Fiora-->
+                <div class="col-sm fixEmote">
+                    <div class="panel panel-default">
+                        <div class="img"><a href="produto_detalhes.html"><img width="q77px" height="177px" alt=""
+                                    src="Images/products/fiora_emote.png"></a>
+                        </div>
+                        <div class="info">
+                            <a class="title" href="produto_detalhes.html">Emote Fiora</a>
+                            <p> <strong>Função:</strong> Mandar uma aprovação pra play adversária </p>
+                            <div class="price">
+                                <span class="st">Preço:</span><strong>$250</strong>
                             </div>
                             <div class="actions">
                                 <button class="btn btn-secondary btnCarrinho" type="button">
@@ -160,9 +237,17 @@
                     </div>
                 </div>
             </div>
+            <ul class="pagination">
+                <li class="page-item "><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
         </div>
     </div>
 </body>
+<br>
 <footer id="footer" class="page-footer font-small">
     <!--Footer-->
     <div class="border footerSeparator">
