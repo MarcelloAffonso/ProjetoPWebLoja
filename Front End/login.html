@@ -12,27 +12,31 @@
 
 
     <link rel="stylesheet" href="CSS/login.css">
-
+    <link rel="stylesheet" href="CSS/generico.css">
     <script src="JavaScript/validacoesGenericas.js"></script>
+
+
 
     <title>Loljinha - Login</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container wrapper">
         <div class="container">
             <!-- Acessar o menu principal/vitrine -->
-            <div class="float-left">
-                <a href="vitrine.html"><i class="fa fa-home" aria-hidden="true" style="font-size: 3.0em;"></i></a>
+            <div class="float-left logo">
+                <a href="vitrine.html"><img alt="Loljinha" src="Images/Logo/logo.png" class="img-fluid"
+                        data-toggle="tooltip" data-placement="left" title="Menu principal"></a>
             </div>
             <!-- Acessar o carrinho-->
             <div class="float-left">
-                <a href="carrinho.html"><i class="fa fa-shopping-cart" aria-hidden="true"
-                        style="font-size: 3.0em;"></i></a>
+                <a href="carrinho.html"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 3.0em;"
+                        data-toggle="tooltip" data-placement="right" title="Acessar carrinho"></i></a>
             </div>
             <!-- Acessar menu de usuário-->
             <div class="float-right">
-                <a href="login.html"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 3.0em;"></i></a>
+                <a href="login.html"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 3.0em;"
+                        data-toggle="tooltip" data-placement="left" title="Lolgin"></i></a>
             </div>
             <br />
             <!-- Barra de pesquisa -->
@@ -123,8 +127,23 @@
                 </div>
             </div>
         </div>
+        <div class="push"></div>
+    </div>
 </body>
-
+<footer id="footer" class="page-footer font-small">
+        <!--Footer-->
+        <div class="border footerSeparator footer">
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <p class="pull-left">Copyright © 2019 TcWhite LOL Inc. All rights reserved.</p> <br>
+                        <p class="pull-right">Designed by <span><a target="_blank"
+                                    href="https://br.op.gg/summoner/userName=tcwhite">TcWhite</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </html>
 <script lang="javascript">
     // Quando for clicado no botão de busca, primeiro é feita uma validação no conteúdo da barra de busca

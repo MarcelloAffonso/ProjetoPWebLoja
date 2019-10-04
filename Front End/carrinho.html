@@ -11,27 +11,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="JavaScript/validacoesGenericas.js"></script>
-
-    <script src="JavaScript/validacoesGenericas.js"></script>
-
+    <link rel="stylesheet" href="CSS/generico.css">
+    
     <title>Loljinha - Carrinho</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container wrapper">
         <!-- Acessar o menu principal/vitrine -->
-        <div class="float-left">
-            <a href="vitrine.html"><i class="fa fa-home" aria-hidden="true" style="font-size: 3.0em;"></i></a>
-        </div>
-        <!-- Acessar o carrinho-->
-        <div class="float-left">
-            <a href="carrinho.html"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 3.0em;"></i></a>
-        </div>
-        <!-- Acessar menu de usuário-->
-        <div class="float-right">
-            <a href="login.html"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 3.0em;"></i></a>
-        </div>
-        <br />
+        <div class="float-left logo">
+                <a href="vitrine.html"><img alt="Loljinha" src="Images/Logo/logo.png" class="img-fluid"
+                        data-toggle="tooltip" data-placement="left" title="Menu principal"></a>
+            </div>
+            <!-- Acessar o carrinho-->
+            <div class="float-left">
+                <a href="carrinho.html"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 3.0em;"
+                        data-toggle="tooltip" data-placement="right" title="Acessar carrinho"></i></a>
+            </div>
+            <!-- Acessar menu de usuário-->
+            <div class="float-right">
+                <a href="login.html"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 3.0em;"
+                        data-toggle="tooltip" data-placement="left" title="Lolgin"></i></a>
+            </div>
+            <br />
         <!-- Barra de pesquisa -->
         <div class="input-group">
             <input id="pesquisa" class="form-control" type="text" placeholder="Digite o item que deseja buscar"
@@ -92,8 +94,22 @@
                 comprando | <i class="fa fa-search-plus"></i></button>
         </div>
     </div>
+    <div class="push"></div>
 </body>
-
+<footer id="footer" class="page-footer font-small">
+        <!--Footer-->
+        <div class="border footerSeparator footer">
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <p class="pull-left">Copyright © 2019 TcWhite LOL Inc. All rights reserved.</p> <br>
+                        <p class="pull-right">Designed by <span><a target="_blank"
+                                    href="https://br.op.gg/summoner/userName=tcwhite">TcWhite</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </html>
 <script lang="javascript">
     // Quando for clicado no botão de busca, primeiro é feita uma validação no conteúdo da barra de busca

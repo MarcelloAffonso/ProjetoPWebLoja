@@ -4,9 +4,27 @@
 .footerSeparator{
     background-color: antiquewhite;
 }
-footer{
-    border: 3px;
+
+.logo{
+    margin-right: 6px;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  .wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+  }
+
+footer,
+  .push {
+    height: 63px;
+  }
+
+
 @media screen and (max-width: 991px) and (min-width: 0px){
     .footerDivisor{
         border-right: none;

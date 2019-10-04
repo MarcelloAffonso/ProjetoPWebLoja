@@ -20,18 +20,20 @@
 <body>
     <div class="container">
         <!-- Acessar o menu principal/vitrine -->
-        <div class="float-left">
-            <a href="vitrine.html"><i class="fa fa-home" aria-hidden="true" style="font-size: 3.0em;"></i></a>
+        <div class="float-left logo">
+            <a href="vitrine.html"><img alt="Loljinha" src="Images/Logo/logo.png" class="img-fluid"
+                    data-toggle="tooltip" data-placement="left" title="Menu principal"></a>
         </div>
         <!-- Acessar o carrinho-->
         <div class="float-left">
-            <a href="carrinho.html"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 3.0em;"></i></a>
+            <a href="carrinho.html"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 3.0em;"
+                    data-toggle="tooltip" data-placement="right" title="Acessar carrinho"></i></a>
         </div>
         <!-- Acessar menu de usuário-->
         <div class="float-right">
-            <a href="login.html"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 3.0em;"></i></a>
+            <a href="login.html"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 3.0em;"
+                    data-toggle="tooltip" data-placement="left" title="Lolgin"></i></a>
         </div>
-
         <br />
         <!-- Barra de pesquisa -->
         <div class="input-group">
@@ -49,6 +51,7 @@
         <div id="alertaErro" class="alert alert-warning fade show" style="display: none ;">
             <strong>Aviso!</strong> Mínimo de 3 letras para efetuar busca!
         </div>
+        <br>
         <!-- Carousel mostrando os três conteúdos principais da página-->
         <div id="carouselItens" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -106,8 +109,8 @@
                     <div class="col-sm">
                         <br>
                         <div class="panel panel-default">
-                            <div class="img"><a href="produto_detalhes.html"><img alt="" width="300px" height="177px"
-                                        src="Images/products/maokai.jpg"></a>
+                            <div class="img view overlay"><a href="produto_detalhes.html"><img alt="" width="300px"
+                                        height="177px" src="Images/products/maokai.jpg"></a>
                             </div>
                             <div class="info">
                                 <a class="title" href="produto_detalhes.html">Maokai</a>
@@ -240,6 +243,7 @@
                         </div>
                     </div>
                 </div>
+                <br>
             </div>
             <ul class="pagination">
                 <li class="page-item "><a class="page-link" href="#">Anterior</a></li>
@@ -255,13 +259,11 @@
 <footer id="footer" class="page-footer font-small">
     <!--Footer-->
     <div class="border footerSeparator">
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <p class="pull-left">Copyright © 2019 TcWhite LOL Inc. All rights reserved.</p>
-                    <p class="pull-right">Designed by <span><a target="_blank"
-                                href="https://br.op.gg/summoner/userName=tcwhite">TcWhite</a></span></p>
-                </div>
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">Copyright © 2019 TcWhite LOL Inc. All rights reserved.</p>
+                <p class="pull-right">Designed by <span><a target="_blank"
+                            href="https://br.op.gg/summoner/userName=tcwhite">TcWhite</a></span></p>
             </div>
         </div>
     </div>
