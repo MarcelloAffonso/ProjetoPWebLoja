@@ -1,0 +1,24 @@
+.border{
+    border: 1px solid black;
+}
+
+.fixChampions .titleProduct{
+    text-align: center;
+    border-bottom: 1px solid black;
+
+}
+.fixEmote{
+    text-align: center;
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px){
+    .fixChampions{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 0px){
+    .fixChampions{
+        text-align: center;
+    }
+}
