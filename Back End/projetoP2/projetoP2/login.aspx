@@ -15,12 +15,11 @@
 
     <link rel="stylesheet" href="Common/CSS/login.css">
     <link rel="stylesheet" href="Common/CSS/generico.css">
-    <script src="JavaScript/validacoesGenericas.js"></script>
+    <script src="Javascript/validacoesGenericas.js"></script>
     <title>Loljinha - Login</title>
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg">
         <!-- Acessar o menu principal/vitrine -->
         <div class="float-left logo">
@@ -55,7 +54,7 @@
     </nav>
     <div class="container wrapper">
         <!-- Alerta -->
-        <div id="alertaErro" class="alert alert-warning fade show" style="display: none;">
+        <div id="alertaErro" class="alert alert-warning fade show" runat="server" style="display: none;">
             <strong>Aviso!</strong> Mínimo de 3 letras para efetuar busca!
         </div>
         <div class="container">
@@ -66,29 +65,26 @@
                     <div>
                         <h1 class="display-3">Login</h1>
                     </div>
-
-                    <!-- Nome-->
-                    <div class="form-group">
-                        <label for="txtNomeInvocador">Nome de Invocador:</label>
-                        <input type="text" class="form-control" id="txtNomeInvocador" size="50"
-                            placeholder="Digite seu nome de invocador" />
-                    </div>
-                    <!-- Senha -->
-                    <div class="form-group">
-                        <label for="txtSenha1">Senha:</label>
-                        <input type="password" class="form-control" id="txtSenha1" size="50"
-                            placeholder="Digite sua senha:" />
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <button type="button" class="btn btn-success float-left" style="margin-right: 5px"
-                                id="btnLogin">
-                                Login</button>
-                            <button type="button" class="btn btn-secondary float-right" data-toggle="modal"
-                                data-target="#ModalEsqueci" id="btnEsqueci">
-                                Esqueci minha senha</button>
+                    <form id="form1" runat="server">
+                        <!-- Nome-->
+                        <div class="form-group">
+                            <asp:Label ID="LabelNomeInvocador" for="txtNomeInvocador" runat="server" Text="Label">Nome de Invocador:</asp:Label>
+                            <asp:TextBox ID="txtNomeInvocador" runat="server" type="text" class="form-control" size="50" placeholder="Digite seu nome de invocador"></asp:TextBox>
+                            <!--<input type="text" class="form-control" id="txtNomeInvocador" size="50"
+                            placeholder="Digite seu nome de invocador" /> -->
                         </div>
-                    </div>
+                        <!-- Senha -->
+                        <div class="form-group">
+                            <asp:Label for="txtSenha" ID="LabelSenha" runat="server" Text="Label">Senha:</asp:Label>
+                            <asp:TextBox ID="txtSenha" class="form-control" runat="server" TextMode="Password" placeholder="Digite sua senha:"></asp:TextBox>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <asp:Button ID="btnLogin" class="btn btn-success float-left" Style="margin-right: 5px" runat="server" Text="Login" OnClick="AutenticaLogin" />
+                                <asp:Button ID="btnEsqueci" runat="server" class="btn btn-secondary float-right" data-toggle="modal" data-target="#ModalEsqueci" Text="Esqueci minha senha" />
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <!-- Cadastro-->
                 <div class="col-lg-6 col-md-6 col-xs-12">
@@ -98,7 +94,7 @@
                     <div class="form-group">
                         <p>Ainda não possui uma conta?Como assim cara?</p>
                         <div class="img">
-                            <img alt="" class="img-fluid" src="Images/Common/lux_emote.png">
+                            <img alt="" class="img-fluid" src="Common/lux_emote.png">
                         </div>
                         <p>Clique <a href="cadastro.html">aqui</a> para se cadastrar!</p>
                     </div>
@@ -106,7 +102,7 @@
             </div>
 
             <!-- Modal cadastro usuário -->
-            <div class="modal fade" id="ModalEsqueci" role="dialog">
+            <asp:Panel class="modal fade" ID="ModalEsqueci" runat="server" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -118,20 +114,18 @@
                             </div>
                             <!-- Email-->
                             <div class="form-group">
-                                <label for="txtEmail">
-                                    Esqueceu sua senha, invocador? Digite o seu email abaixo e te
-                                    enviaremos um email para redefinição de senha.</label>
-                                <input class="form-control" type="text" id="txtEmail" size="60"
-                                    placeholder="Digite seu email" />
+                                <asp:Label ID="LabelModalEmail" for="txtEmail" runat="server" Text="Label">Esqueceu sua senha, invocador? Digite o seu email abaixo e te
+                                    enviaremos um email para redefinição de senha.</asp:Label>
+                                <asp:TextBox ID="txtEmail" runat="server" placeholder="Digite seu email"></asp:TextBox>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger mr-auto" data-dismiss="modal">Cancelar</button>
-                            <button class="btn btn-success" id="bt1">Enviar</button>
+                            <asp:Button class="btn btn-success" ID="bt1" runat="server" Text="Button" />
                         </div>
                     </div>
                 </div>
-            </div>
+            </asp:Panel>
         </div>
         <div class="push"></div>
     </div>
