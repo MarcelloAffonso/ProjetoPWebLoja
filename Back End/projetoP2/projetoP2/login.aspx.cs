@@ -36,5 +36,10 @@ namespace projetoP2
                 alertaErro.Attributes["style"] = "display: normal";
             }
         }
+
+        protected void EsqueciSenha(object sender, EventArgs e)
+        {
+            Response.Redirect("esqueci.aspx");
+        }
     }
 }

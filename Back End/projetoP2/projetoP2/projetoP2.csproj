@@ -74,6 +74,7 @@
     <Content Include="Common\CSS\generico.css" />
     <Content Include="Common\CSS\login.css" />
     <Content Include="Common\CSS\vitrine.css" />
+    <Content Include="esqueci.aspx" />
     <Content Include="Common\Javascript\validacoesGenericas.js" />
     <Content Include="Common\logo.png" />
     <Content Include="Common\lux_emote.png" />
@@ -81,6 +82,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="esqueci.aspx.cs">
+      <DependentUpon>esqueci.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="esqueci.aspx.designer.cs">
+      <DependentUpon>esqueci.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

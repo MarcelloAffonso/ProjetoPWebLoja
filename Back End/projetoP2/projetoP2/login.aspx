@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head runat="server">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -81,7 +81,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <asp:Button ID="btnLogin" class="btn btn-success float-left" Style="margin-right: 5px" runat="server" Text="Login" OnClick="AutenticaLogin" />
-                                <asp:Button ID="btnEsqueci" runat="server" class="btn btn-secondary float-right" data-toggle="modal" data-target="#ModalEsqueci" Text="Esqueci minha senha" />
+                                <asp:Button ID="btnEsqueci" runat="server" class="btn btn-secondary float-right" data-toggle="modal" data-target="#ModalEsqueci" Text="Esqueci minha senha" OnClick="EsqueciSenha" />
                             </div>
                         </div>
                     </form>
@@ -100,32 +100,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Modal cadastro usuário -->
-            <asp:Panel class="modal fade" ID="ModalEsqueci" runat="server" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="display-4">Recuperação de senha</h1>
-                        </div>
-                        <div class="modal-body">
-                            <div class="img">
-                                <img alt="" src="Images/Common/blitz_duvida.png">
-                            </div>
-                            <!-- Email-->
-                            <div class="form-group">
-                                <asp:Label ID="LabelModalEmail" for="txtEmail" runat="server" Text="Label">Esqueceu sua senha, invocador? Digite o seu email abaixo e te
-                                    enviaremos um email para redefinição de senha.</asp:Label>
-                                <asp:TextBox ID="txtEmail" runat="server" placeholder="Digite seu email"></asp:TextBox>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger mr-auto" data-dismiss="modal">Cancelar</button>
-                            <asp:Button class="btn btn-success" ID="bt1" runat="server" Text="Button" />
-                        </div>
-                    </div>
-                </div>
-            </asp:Panel>
         </div>
         <div class="push"></div>
     </div>
