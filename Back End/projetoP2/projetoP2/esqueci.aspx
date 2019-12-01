@@ -18,30 +18,63 @@
     <title>Loljinha - Login</title>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <!-- Modal cadastro usuário -->
-        <div class="container">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="display-4">Recuperação de senha</h1>
-                </div>
-                <div class="modal-body">
-                    <div class="img">
-                        <img alt="" src="Images/Common/blitz_duvida.png">
-                    </div>
-                    <!-- Email-->
-                    <div class="form-group">
-                        <asp:Label ID="LabelModalEmail" for="txtEmail" runat="server" Text="Label">Esqueceu sua senha, invocador? Digite o seu email abaixo e te
-                                    enviaremos um email para redefinição de senha.</asp:Label>
-                        <asp:TextBox ID="txtEmail" runat="server" placeholder="Digite seu email"></asp:TextBox>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger mr-auto" data-dismiss="modal">Cancelar</button>
-                    <asp:Button class="btn btn-success" ID="bt1" runat="server" Text="Button" />
-                </div>
+    <nav class="navbar navbar-expand-lg">
+        <!-- Acessar o menu principal/vitrine -->
+        <div class="float-left logo">
+            <a href="vitrine.html">
+                <img alt="Loljinha" src="Common/logo.png" class="img-fluid"
+                    data-toggle="tooltip" data-placement="left" title="Menu principal"></a>
+        </div>
+        <!-- Barra de pesquisa -->
+        <div class="input-group">
+            <input id="pesquisa" class="form-control" type="text" placeholder="Digite o item que deseja buscar"
+                aria-label="Search">
+            <div class="input-group-append">
+                <button class="btn btn-secondary" onclick="validaCampoVazio(pesquisa.value)" type="button"
+                    id="btnBusca">
+                    <i class="fa fa-search"></i>
+                </button>
             </div>
         </div>
-    </form>
+        <!-- Acessar menu de usuário-->
+        <div class="float-right usuario">
+            <a href="login.html">
+                <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 2.0em;"
+                    data-toggle="tooltip" data-placement="left" title="Lolgin"></i></a>
+        </div>
+        <!-- Acessar o carrinho-->
+        <div class="float-right carrinho">
+            <a href="carrinho.html">
+                <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 2.0em;"
+                    data-toggle="tooltip" data-placement="right" title="Acessar carrinho"></i></a>
+        </div>
+        <br />
+    </nav>
+    <div class="container">
+        <hr />
+        <form id="form1" runat="server">
+            <div class="row">
+                <h1 class="display-4">Recuperação de senha</h1>
+                <div class="form-group">
+                    <div class="img">
+                        <img alt="" src="Common/blitz_duvida.png" />
+                    </div>
+                    <!-- Email-->
+
+                    <asp:Label ID="LabelEmail" runat="server" Text="Label">Esqueceu sua senha, invocador? Digite o seu email abaixo e te
+                                    enviaremos um email para redefinição de senha.</asp:Label><br />
+                    <asp:TextBox ID="txtEmail" runat="server" class="form-control" placeholder="Digite seu email"></asp:TextBox>
+                </div>
+            </div>
+            <div class="form-group">
+                <asp:Button class="btn btn-success float-left" ID="btnConfirma" runat="server" Text="Recuperar senha" OnClick="enviarEmail" />
+                <asp:Button class="btn btn-danger mr-auto float-left" ID="btnCancelar" runat="server" Text="Cancelar" OnClick="voltarLogin" /><br/>
+            </div>
+        </form>
+        <br/>
+        <div id="alertaErro" class="alert alert-warning fade show" runat="server" style="display: none;">
+            <asp:Label ID="LabelEmailEnviado" runat="server" Text=""></asp:Label>
+        </div>
+    </div>
 </body>
 </html>

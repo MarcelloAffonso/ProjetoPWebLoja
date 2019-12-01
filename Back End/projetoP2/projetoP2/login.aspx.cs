@@ -29,7 +29,7 @@ namespace projetoP2
                 alertaErro.Attributes["style"] = "display: none";
                 Session["codigo"] = registro["codigo"].ToString();
                 Session["nome_invocador"] = registro["nome_invocador"].ToString();
-                //Response.Redirect("lista.aspx");
+                Response.Redirect("vitrine.aspx");
             }
             else
             {

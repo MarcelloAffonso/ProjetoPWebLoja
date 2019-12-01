@@ -74,11 +74,18 @@
     <Content Include="Common\CSS\generico.css" />
     <Content Include="Common\CSS\login.css" />
     <Content Include="Common\CSS\vitrine.css" />
+    <Content Include="Common\Images\elo_third.jpg" />
+    <Content Include="Common\Images\maokai_first.jpg" />
+    <Content Include="Common\Images\Vitrine\1.jpg" />
+    <Content Include="Common\Images\Vitrine\2.jpg" />
+    <Content Include="Common\Images\Vitrine\3.jpg" />
+    <Content Include="Common\Images\yasuo_second.jpg" />
     <Content Include="esqueci.aspx" />
     <Content Include="Common\Javascript\validacoesGenericas.js" />
     <Content Include="Common\logo.png" />
     <Content Include="Common\lux_emote.png" />
     <Content Include="login.aspx" />
+    <Content Include="vitrine.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +104,13 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vitrine.aspx.cs">
+      <DependentUpon>vitrine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vitrine.aspx.designer.cs">
+      <DependentUpon>vitrine.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
