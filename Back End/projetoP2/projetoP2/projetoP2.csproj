@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="carrinho.aspx" />
     <Content Include="Common\blitz_duvida.png" />
     <Content Include="Common\CSS\generico.css" />
     <Content Include="Common\CSS\login.css" />
@@ -89,6 +90,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="carrinho.aspx.cs">
+      <DependentUpon>carrinho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="carrinho.aspx.designer.cs">
+      <DependentUpon>carrinho.aspx</DependentUpon>
+    </Compile>
     <Compile Include="esqueci.aspx.cs">
       <DependentUpon>esqueci.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

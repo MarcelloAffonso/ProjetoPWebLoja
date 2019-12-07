@@ -27,7 +27,7 @@ namespace projetoP2
             if (registro.Read())
             {
                 alertaErro.Attributes["style"] = "display: none";
-                Session["codigo"] = registro["codigo"].ToString();
+                Session["codigo_cliente"] = registro["codigo"].ToString();
                 Session["nome_invocador"] = registro["nome_invocador"].ToString();
                 Response.Redirect("vitrine.aspx");
             }

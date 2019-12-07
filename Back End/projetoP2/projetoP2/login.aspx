@@ -23,9 +23,9 @@
     <nav class="navbar navbar-expand-lg">
         <!-- Acessar o menu principal/vitrine -->
         <div class="float-left logo">
-            <a href="vitrine.html">
+            <asp:HyperLink runat="server" href="vitrine.aspx">
                 <img alt="Loljinha" src="Common/logo.png" class="img-fluid"
-                    data-toggle="tooltip" data-placement="left" title="Menu principal"></a>
+                    data-toggle="tooltip" data-placement="left" title="Menu principal"></asp:HyperLink>
         </div>
         <!-- Barra de pesquisa -->
         <div class="input-group">
@@ -40,15 +40,15 @@
         </div>
         <!-- Acessar menu de usuário-->
         <div class="float-right usuario">
-            <a href="login.html">
+            <asp:HyperLink runat="server" href="login.aspx">
                 <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 2.0em;"
-                    data-toggle="tooltip" data-placement="left" title="Lolgin"></i></a>
+                    data-toggle="tooltip" data-placement="left" title="Lolgin"></i></asp:HyperLink>
         </div>
         <!-- Acessar o carrinho-->
         <div class="float-right carrinho">
-            <a href="carrinho.html">
+            <asp:HyperLink runat="server" href="carrinho.aspx">
                 <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 2.0em;"
-                    data-toggle="tooltip" data-placement="right" title="Acessar carrinho"></i></a>
+                    data-toggle="tooltip" data-placement="right" title="Acessar carrinho"></i></asp:HyperLink>
         </div>
         <br />
     </nav>
@@ -104,23 +104,6 @@
         <div class="push"></div>
     </div>
 </body>
-<footer id="footer" class="page-footer font-small">
-    <!--Footer-->
-    <div class="border footerSeparator footer">
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <p class="pull-left">Copyright © 2019 TcWhite LOL Inc. All rights reserved.</p>
-                    <br>
-                    <p class="pull-right">
-                        Designed by <span><a target="_blank"
-                            href="https://br.op.gg/summoner/userName=tcwhite">TcWhite</a></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
 </html>
 <script lang="javascript">
     // Quando for clicado no botão de busca, primeiro é feita uma validação no conteúdo da barra de busca

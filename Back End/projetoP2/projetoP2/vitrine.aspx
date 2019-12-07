@@ -22,9 +22,9 @@
     <nav class="navbar navbar-expand-lg">
         <!-- Acessar o menu principal/vitrine -->
         <div class="float-left logo">
-            <a href="vitrine.html">
+            <asp:HyperLink runat="server" href="vitrine.aspx">
                 <img alt="Loljinha" src="Common/logo.png" class="img-fluid"
-                    data-toggle="tooltip" data-placement="left" title="Menu principal"></a>
+                    data-toggle="tooltip" data-placement="left" title="Menu principal"></asp:HyperLink>
         </div>
         <!-- Barra de pesquisa -->
         <div class="input-group">
@@ -39,15 +39,15 @@
         </div>
         <!-- Acessar menu de usuário-->
         <div class="float-right usuario">
-            <a href="login.html">
+            <asp:HyperLink runat="server" href="login.aspx">
                 <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 2.0em;"
-                    data-toggle="tooltip" data-placement="left" title="Lolgin"></i></a>
+                    data-toggle="tooltip" data-placement="left" title="Lolgin"></i></asp:HyperLink>
         </div>
         <!-- Acessar o carrinho-->
         <div class="float-right carrinho">
-            <a href="carrinho.html">
+            <asp:HyperLink runat="server" href="carrinho.aspx">
                 <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 2.0em;"
-                    data-toggle="tooltip" data-placement="right" title="Acessar carrinho"></i></a>
+                    data-toggle="tooltip" data-placement="right" title="Acessar carrinho"></i></asp:HyperLink>
         </div>
         <br />
     </nav>
@@ -119,7 +119,10 @@
                                     <p><strong>Função: </strong><%#Eval("categoria") %></p>
                                     <p><strong>Preço: </strong><%#Eval("valor") %></p>
                                     <p><strong>Ano lançamento: </strong><%#Eval("ano_lancamento") %></p>
-                                    <button data-codigo="<%#Eval("codigo") %>">Comprar</button>
+                                    <a href="carrinho.aspx?valorUnitario=<%#Eval("valor") %>&codigoProduto=<%#Eval("codigo") %>">
+                                        <button type ="button">Comprar</button>
+                                    </a>
+
                                 </div>
                             </div>
                         </div>

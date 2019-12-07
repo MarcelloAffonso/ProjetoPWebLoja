@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="esqueci.aspx.cs" Inherits="projetoP2.Common.esqueci" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="carrinho.aspx.cs" Inherits="projetoP2.carrinho" %>
 
 <!DOCTYPE html>
 
@@ -12,13 +12,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+    <script src="Common/Javascript/validacoesGenericas.js"></script>
     <link rel="stylesheet" href="Common/CSS/generico.css">
-    <script src="Javascript/validacoesGenericas.js"></script>
-    <title>Loljinha - Login</title>
+
+    <title>Loljinha - Carrinho</title>
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
         <!-- Acessar o menu principal/vitrine -->
         <div class="float-left logo">
             <asp:HyperLink runat="server" href="vitrine.aspx">
@@ -50,31 +50,16 @@
         </div>
         <br />
     </nav>
-    <div class="container">
-        <hr />
-        <form id="form1" runat="server">
-            <div class="row">
-                <h1 class="display-4">Recuperação de senha</h1>
-                <div class="form-group">
-                    <div class="img">
-                        <img alt="" src="Common/blitz_duvida.png" />
-                    </div>
-                    <!-- Email-->
-
-                    <asp:Label ID="LabelEmail" runat="server" Text="Label">Esqueceu sua senha, invocador? Digite o seu email abaixo e te
-                                    enviaremos um email para redefinição de senha.</asp:Label><br />
-                    <asp:TextBox ID="txtEmail" runat="server" class="form-control" placeholder="Digite seu email"></asp:TextBox>
-                </div>
-            </div>
-            <div class="form-group">
-                <asp:Button class="btn btn-success float-left" ID="btnConfirma" runat="server" Text="Recuperar senha" OnClick="enviarEmail" />
-                <asp:Button class="btn btn-danger mr-auto float-left" ID="btnCancelar" runat="server" Text="Cancelar" OnClick="voltarLogin" /><br/>
-            </div>
-        </form>
-        <br/>
-        <div id="alertaErro" class="alert alert-warning fade show" runat="server" style="display: none;">
-            <asp:Label ID="LabelEmailEnviado" runat="server" Text=""></asp:Label>
-        </div>
-    </div>
+    <h1 class="display-4">Compras:</h1>
+    <asp:ListView ID="ListViewCompras" runat="server">
+        <ItemTemplate>
+            <asp:HyperLink runat="server"><strong><%#Eval("titulo") %></strong>|</asp:HyperLink>
+            <strong>Preço: </strong><%#Eval("valorTotal") %> |
+            <br />
+        </ItemTemplate>
+    </asp:ListView>
+    <br />
+    Valor total:
+    <asp:Label ID="LabelValorTotal" runat="server" Text=""></asp:Label>
 </body>
 </html>

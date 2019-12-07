@@ -14,7 +14,7 @@ namespace projetoP2
         string sc = "Server=localhost;Database=lojavirtual;Uid=root;Pwd=;";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["codigo"] == null)
+            if (Session["codigo_cliente"] == null)
             {
                 Response.Redirect("login.aspx");
             }
@@ -22,7 +22,6 @@ namespace projetoP2
             {
                 carregarTela();
             }
-
         }
 
         private void carregarTela()
